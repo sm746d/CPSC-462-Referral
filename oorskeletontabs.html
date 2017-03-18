@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Case</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#profile">Profile</a></li>
+    <li><a data-toggle="tab" href="#education">Education</a></li>
+    <li><a data-toggle="tab" href="#exp">Experience</a></li>
+    <li><a data-toggle="tab" href="#projects">Projects</a></li>
+    <li><a data-toggle="tab" href="#references">References</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="profile" class="tab-pane fade in active">
+      <h3>Profile</h3>
+      <table>
+      <tr>
+      <td><img src ="../../Pictures/smileyface.jpg" alt = "Smiley Face" style = "width:300px;height:300px">
+      </td>
+      <td>
+      	<table>
+      		<tr>
+      			<td>
+      			First Name:
+      			</td>
+      			<td>
+      				<input type="text" name = "fName" value = "Smiley">
+				</td>
+      		</tr>
+      		<tr>
+      			<td>
+      			Middle Name:	
+      			</td>
+      			<td>
+      				<input type="text" name = "mName" value = "Smiles">
+      			</td>
+      		</tr>
+      		<tr>
+      			<td>
+     				<table cellspacing="50">
+      					<tr>
+      						<td>
+      						Middle Name Option:
+      						</td>
+      						<td>
+      							<input type="radio" name = "yesMName" checked>Show Full
+      						</td>
+      						<td>
+      							<input type= "radio" name = "initMName">Show Initial 
+      						</td>
+      						<td>
+      							<input type="radio" name = "noMName">Don't Show
+      						</td>
+      					</tr>
+      				</table>
+				</td>
+      		</tr>
+      		<tr>
+      			<td>
+      				Last Name:
+      			</td>
+      			<td>
+      				<input type="text" name = "lName" value = "McSmileFace"
+      			</td>
+      		</tr>
+      		<tr>
+      			<td>
+      				Primary Phone Number:
+      			</td>
+      			<td>
+      			<input type="text" name = "phoneNum">
+      			</td>
+      		</tr>
+      		<tr>
+      			<td>
+      				Address:
+      			</td>
+      			<td>
+      			<input type="text" name = "address">
+				</td>					   
+      		</tr>
+      		<tr>
+      			<td>
+      				City:
+      			</td>
+      			<td>
+      				<input type="text" name = "city">
+				</td>
+      		</tr>
+      		<tr>
+      			<td>
+      				State:
+      			</td>
+      			<td>
+      				<input type="text" name = "state">
+      			</td>
+      		</tr>
+      		<tr>
+      			<td>
+      			Zip Code:
+				</td>
+      			<td>
+      				<input type="text" name = "zip">
+				</td>
+      		</tr>
+      	</table>
+      </td>
+      </tr>
+      </table>
+      
+    </div>
+    <div id="education" class="tab-pane fade">
+      <h3>Education</h3>
+      <p>Which High School did you graduate from(if any)? What degrees have you earned or are pursuing?</p>
+    </div>
+    <div id="exp" class="tab-pane fade">
+      <h3>Experience</h3>
+      <p>What work experience do you have right now(if any)?</p>
+    </div>
+    <div id="projects" class="tab-pane fade">
+      <h3>Projects</h3>
+      <p>What projects have you worked on?</p>
+    </div>
+    <div id="references" class="tab-pane fade">
+      <h3>References</h3>
+      <p>Place references from professors or employers here.</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
