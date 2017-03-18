@@ -41,6 +41,7 @@
 	   <p class="tagline"><strong>Show Who You Are Using OOR</strong></p>
     </center>
   </section>
+  </section>
   <!-- Login Section -->
   <section class = "login">
   <h7 class = "hidden">space</h7>
@@ -54,14 +55,57 @@
   </tr>
   <tr>
   	<td align="center">
-		<button type="button" class="btn btn-login">LOGIN</button>
+		<button type="button" class="btn btn-login" onClick="showLogDiv()" id="loginButton" >LOGIN</button>
   	</td>
   	<td align="center">
-		<button type="button" class="btn btn-signin btn-sm">SIGN UP</button>
+		<button type="button" class="btn btn-signin btn-sm" onClick = "showSignDiv()" id="signUpButton">SIGN UP</button>
   	</td>
   </tr>
   </table>
-  </section>
+  
+  <div class = "login_container" id = "login_container">
+    <form action="/action_page.php">
+  Email:
+  <br>
+  <input type="text" name = "email" value = "">
+  <br>
+  Password:
+  <br>
+  <input type="password" name = "password" value = "">
+  <br>
+  
+  <br>
+  <input type="submit" value="Submit">
+</form>
+</div> 	
+  
+  
+ <div class = "signup_container" id = "signup_container">
+	<form action="/action_page.php">
+  First name:<br>
+  <input type="text" name="firstname" value="">
+  <br>
+  Last name:<br>
+  <input type="text" name="lastname" value="">
+  <br>
+  Username:<br>
+  <input type="text" name = "username" value = "">
+  <br>
+  Email:
+  <br>
+  <input type="text" name = "email" value = "">
+  <br>
+  Password:
+  <br>
+  <input type="password" name = "password" value = "">
+  <br>
+  
+  <br>
+  <input type="submit" value="Submit">
+</form>
+</div>
+	  
+	  
   <!-- About Section -->
   <section class="about" id="about">
 	<h2> <center><strong>About Our Own References</strong></center></h2>
@@ -148,3 +192,24 @@
 <!-- Main Container Ends -->
 </body>
 </html>
+
+<script>
+	jQuery('#loginButton').click(function(){
+		jQuery('#login_container').show();
+		jQuery('#signup_container').hide();
+	});
+	
+	jQuery('#signUpButton').click(function(){
+		jQuery('#login_container').hide();
+		jQuery('#signup_container').show();
+	});
+/*function showLogDiv()
+	{
+		document.getElementById('login_container').style.display = "block";
+	}
+	
+function showSignDiv()
+	{
+		document.getElementById('signup_container').style.display = "block";
+	}*/
+</script>
