@@ -1,6 +1,149 @@
 --All db queries for the tables
 -- Database: referral
 
--- DROP DATABASE referral;
-
 CREATE DATABASE referral;
+
+-- Table: public.education
+
+CREATE TABLE public.education
+(
+    eid integer NOT NULL DEFAULT nextval('education_eid_seq'::regclass),
+    sid integer NOT NULL,
+    level "char",
+    graduated boolean,
+    uid integer NOT NULL,
+    startdate date,
+    enddate date,
+    currentstatus "char"[],
+    CONSTRAINT education_pkey PRIMARY KEY (eid),
+    CONSTRAINT uid_foreign_key FOREIGN KEY (uid)
+        REFERENCES public."user_Acct" (uid) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+ 
+------------------------------------------------------------------------------------
+-- Table: public.login
+CREATE TABLE public.login
+(
+    id integer NOT NULL DEFAULT nextval('login_id_seq'::regclass),
+    email "char"[],
+    password "char"[],
+    loggeddate date,
+    createddate date,
+    CONSTRAINT login_pkey PRIMARY KEY (id)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+------------------------------------------------------------------------------------
+
+-- Table: public.lostofschools
+
+CREATE TABLE public.lostofschools
+(
+    schoolid integer NOT NULL DEFAULT nextval('lostofschools_schoolid_seq'::regclass),
+    colg_name "char"[],
+    colg_address "char"[],
+    CONSTRAINT lostofschools_pkey PRIMARY KEY (schoolid)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+------------------------------------------------------------------------------------
+
+-- Table: public.project
+
+CREATE TABLE public.project
+(
+    pr_id bigint NOT NULL DEFAULT nextval('project_pr_id_seq'::regclass),
+    projectname "char"[],
+    projectdescription character varying(400)[] COLLATE pg_catalog."default",
+    uid integer,
+    CONSTRAINT "User Id For Key Constraint" PRIMARY KEY (pr_id),
+    CONSTRAINT project_uid_fkey FOREIGN KEY (uid)
+        REFERENCES public."user_Acct" (uid) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+------------------------------------------------------------------------------------
+-- Table: public.recommendation
+
+CREATE TABLE public.recommendation
+(
+    reco_id integer NOT NULL DEFAULT nextval('recommendation_reco_id_seq'::regclass),
+    uid integer,
+    reco_name "char"[],
+    reco_details "char"[],
+    prof_id integer,
+    reco_date date,
+    CONSTRAINT recommendation_pkey PRIMARY KEY (reco_id),
+    CONSTRAINT "Uid Foreign Key" FOREIGN KEY (uid)
+        REFERENCES public."user_Acct" (uid) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+------------------------------------------------------------------------------------
+-- Table: public."user_Acct"
+
+CREATE TABLE public."user_Acct"
+(
+    uid integer NOT NULL DEFAULT nextval('"user_Acct_uid_seq"'::regclass),
+    firstname "char"[],
+    lastname "char"[],
+    email "char"[],
+    cell "char"[],
+    adrid integer,
+    id integer,
+    CONSTRAINT "user_Acct_pkey" PRIMARY KEY (uid),
+    CONSTRAINT login_for_key FOREIGN KEY (id)
+        REFERENCES public.login (id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+------------------------------------------------------------------------------------
+-- Table: public.workex
+
+CREATE TABLE public.workex
+(
+    coid integer NOT NULL DEFAULT nextval('workex_coid_seq'::regclass),
+    co_name "char"[],
+    co_addr "char"[],
+    start_date date,
+    end_date date,
+    designation "char"[],
+    current_status "char"[],
+    uid integer,
+    CONSTRAINT workex_pkey PRIMARY KEY (coid),
+    CONSTRAINT "User_Id_For_Key" FOREIGN KEY (uid)
+        REFERENCES public."user_Acct" (uid) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+------------------------------------------------------------------------------------
