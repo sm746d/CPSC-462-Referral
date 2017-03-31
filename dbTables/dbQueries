@@ -1,1 +1,6 @@
 --All db queries for the tables
+-- Database: referral
+
+-- DROP DATABASE referral;
+
+CREATE DATABASE referral;
