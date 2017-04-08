@@ -202,7 +202,7 @@ TABLESPACE pg_default;
 CREATE TABLE public.relation
 (
     relation_id integer NOT NULL DEFAULT nextval('relation_relation_id_seq'::regclass),
-    relation_name "char",
+    relation_name "char"[],
     CONSTRAINT relation_pkey PRIMARY KEY (relation_id)
 )
 WITH (
