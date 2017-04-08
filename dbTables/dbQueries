@@ -99,7 +99,6 @@ WITH (
     OIDS = FALSE
 )
 TABLESPACE pg_default;
-
 ------------------------------------------------------------------------------------
 -- Table: public."user_Acct"
 
@@ -147,3 +146,66 @@ WITH (
 )
 TABLESPACE pg_default;
 ------------------------------------------------------------------------------------
+-- Table: public.project
+
+CREATE TABLE public.project
+(
+    pr_id bigint NOT NULL DEFAULT nextval('project_pr_id_seq'::regclass),
+    projectname "char"[],
+    projectdescription character varying(400)[] COLLATE pg_catalog."default",
+    uid integer,
+    CONSTRAINT "User Id For Key Constraint" PRIMARY KEY (pr_id),
+    CONSTRAINT project_uid_fkey FOREIGN KEY (uid)
+        REFERENCES public."user_Acct" (uid) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+------------------------------------------------------------------------------------
+-- Table: public.send_request
+
+CREATE TABLE public.send_request
+(
+    request_id integer NOT NULL DEFAULT nextval('send_request_request_id_seq'::regclass),
+    sender_id integer,
+    receiver_id integer,
+    req_date date,
+    relationship "char"[],
+    CONSTRAINT send_request_pkey PRIMARY KEY (request_id)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+------------------------------------------------------------------------------------
+-- Table: public.connection
+
+CREATE TABLE public.connection
+(
+    connection_id integer NOT NULL DEFAULT nextval('connection_connection_id_seq'::regclass),
+    student_id integer,
+    prof_id integer,
+    relation "char"[],
+    con_date date,
+    CONSTRAINT connection_pkey PRIMARY KEY (connection_id)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+------------------------------------------------------------------------------------
+-- Table: public.relation
+
+CREATE TABLE public.relation
+(
+    relation_id integer NOT NULL DEFAULT nextval('relation_relation_id_seq'::regclass),
+    relation_name "char",
+    CONSTRAINT relation_pkey PRIMARY KEY (relation_id)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
