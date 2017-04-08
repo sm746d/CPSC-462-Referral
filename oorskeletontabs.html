@@ -23,17 +23,17 @@
   <div class="tab-content">
     <div id="profile" class="tab-pane fade in active">
       <h3>Profile</h3>
-      <table>
+      <table width="1127">
       <tr>
-      <td><img src ="../../Pictures/smileyface.jpg" alt = "Smiley Face" style = "width:300px;height:300px">
+      <td width="300"><img src ="../../Pictures/smileyface.jpg" alt = "Smiley Face" style = "width:300px;height:300px">
       </td>
-      <td>
-      	<table>
+      <td width="554">
+      	<table width="710" height="327">
       		<tr>
-      			<td>
+      			<td width="380">
       			First Name:
       			</td>
-      			<td>
+      			<td width="174">
       				<input type="text" name = "fName" value = "Smiley">
 				</td>
       		</tr>
@@ -47,7 +47,7 @@
       		</tr>
       		<tr>
       			<td>
-     				<table cellspacing="50">
+     				<table width="513" cellspacing="50">
       					<tr>
       						<td>
       						Middle Name Option:
@@ -102,7 +102,59 @@
       				State:
       			</td>
       			<td>
-      				<input type="text" name = "state">
+      				<select name="state">
+						<option value="AL">Alabama</option>
+						<option value="AK">Alaska</option>
+						<option value="AZ">Arizona</option>
+						<option value="AR">Arkansas</option>
+						<option value="CA">California</option>
+						<option value="CO">Colorado</option>
+						<option value="CT">Connecticut</option>
+						<option value="DE">Delaware</option>
+						<option value="DC">District of Columbia</option>
+						<option value="FL">Florida</option>
+						<option value="GA">Georgia</option>
+						<option value="HI">Hawaii</option>
+						<option value="ID">Idaho</option>
+						<option value="IL">Illinois</option>
+						<option value="IN">Indiana</option>
+						<option value="IA">Iowa</option>
+						<option value="KS">Kansas</option>
+						<option value="KY">Kentucky</option>
+						<option value="LA">Louisiana</option>
+						<option value="ME">Maine</option>
+						<option value="MD">Maryland</option>
+						<option value="MA">Massachusetts</option>
+						<option value="MI">Michigan</option>
+						<option value="MN">Minnesota</option>
+						<option value="MS">Mississippi</option>
+						<option value="MO">Missouri</option>
+						<option value="MT">Montana</option>
+						<option value="NE">Nebraska</option>
+						<option value="NV">Nevada</option>
+						<option value="NH">New Hampshire</option>
+						<option value="NJ">New Jersey</option>
+						<option value="NM">New Mexico</option>
+						<option value="NY">New York</option>
+						<option value="NC">North Carolina</option>
+						<option value="ND">North Dakota</option>
+						<option value="OH">Ohio</option>
+						<option value="OK">Oklahoma</option>
+						<option value="OR">Oregon</option>
+						<option value="PA">Pennsylvania</option>
+						<option value="RI">Rhode Island</option>
+						<option value="SC">South Carolina</option>
+						<option value="SD">South Dakota</option>
+						<option value="TN">Tennessee</option>
+						<option value="TX">Texas</option>
+						<option value="UT">Utah</option>
+						<option value="VT">Vermont</option>
+						<option value="VA">Virginia</option>
+						<option value="WA">Washington</option>
+						<option value="WV">West Virginia</option>
+						<option value="WI">Wisconsin</option>
+						<option value="WY">Wyoming</option>
+					</select>
       			</td>
       		</tr>
       		<tr>
@@ -119,13 +171,287 @@
       </table>
       
     </div>
-    <div id="education" class="tab-pane fade">
+    <div id="education" class="tab-pane fade col-lg-11">
       <h3>Education</h3>
-      <p>Which High School did you graduate from(if any)? What degrees have you earned or are pursuing?</p>
+      <p>What degrees have you earned or are pursuing?</p>
+      <table>
+      <tr>
+      	<td>
+      <table width="1200" height="279" cellpadding="10">
+      	<tr>
+      		<td>
+      			School Name:
+      		</td>
+      		<td>
+      		<input type = "text" name = "schoolName">	
+      		</td>
+      	</tr>
+      	<tr>
+      		<td>
+      			Address:
+      		</td>
+      		<td>
+      		<input type = "text" name= "schoolAddress">
+			</td>
+      	</tr>
+      	<tr>
+      		<td>
+      			City:
+      		</td>
+      		<td>
+      		<input type = "text" name= "schoolCity">
+			</td>
+      		<td>
+      			State:
+      		</td>
+      		<td>
+      		<select name="schoolState">
+				<option value="AL">Alabama</option>
+				<option value="AK">Alaska</option>
+				<option value="AZ">Arizona</option>
+				<option value="AR">Arkansas</option>
+				<option value="CA">California</option>
+				<option value="CO">Colorado</option>
+				<option value="CT">Connecticut</option>
+				<option value="DE">Delaware</option>
+				<option value="DC">District of Columbia</option>
+				<option value="FL">Florida</option>
+				<option value="GA">Georgia</option>
+				<option value="HI">Hawaii</option>
+				<option value="ID">Idaho</option>
+				<option value="IL">Illinois</option>
+				<option value="IN">Indiana</option>
+				<option value="IA">Iowa</option>
+				<option value="KS">Kansas</option>
+				<option value="KY">Kentucky</option>
+				<option value="LA">Louisiana</option>
+				<option value="ME">Maine</option>
+				<option value="MD">Maryland</option>
+				<option value="MA">Massachusetts</option>
+				<option value="MI">Michigan</option>
+				<option value="MN">Minnesota</option>
+				<option value="MS">Mississippi</option>
+				<option value="MO">Missouri</option>
+				<option value="MT">Montana</option>
+				<option value="NE">Nebraska</option>
+				<option value="NV">Nevada</option>
+				<option value="NH">New Hampshire</option>
+				<option value="NJ">New Jersey</option>
+				<option value="NM">New Mexico</option>
+				<option value="NY">New York</option>
+				<option value="NC">North Carolina</option>
+				<option value="ND">North Dakota</option>
+				<option value="OH">Ohio</option>
+				<option value="OK">Oklahoma</option>
+				<option value="OR">Oregon</option>
+				<option value="PA">Pennsylvania</option>
+				<option value="RI">Rhode Island</option>
+				<option value="SC">South Carolina</option>
+				<option value="SD">South Dakota</option>
+				<option value="TN">Tennessee</option>
+				<option value="TX">Texas</option>
+				<option value="UT">Utah</option>
+				<option value="VT">Vermont</option>
+				<option value="VA">Virginia</option>
+				<option value="WA">Washington</option>
+				<option value="WV">West Virginia</option>
+				<option value="WI">Wisconsin</option>
+				<option value="WY">Wyoming</option>
+				</select>
+			</td>
+      		<td>
+      			Zip:
+      		</td>
+      		<td>
+      		<input type = "text" name= "schoolZip">
+			</td>
+		</tr>
+     	<tr>
+     		<td>
+     			GPA:
+      		</td>
+      		<td>
+      		<input type = "text" name= "schoolGPA">
+			</td>
+		</tr>
+     	<tr>
+      		<td>
+      			Major(s):
+      		</td>
+      		<td>
+      		<input type = "text" name= "schoolMajors">
+			</td>
+		</tr>
+     	<tr>
+      		<td>
+      			Degree:
+      		</td>
+      		<td>
+      		<input type = "text" name= "schoolDegreeType">
+			</td>
+		</tr>
+     	<tr>
+     		<td>
+     			Graduated? 
+     		</td>
+     		<td>
+     			<input type = "radio" name= "schoolDegreeYes">Yes
+     		</td>
+     		<td>
+     			<input type = "radio" name="schoolDegreeNo">No
+     		</td>
+     	</tr>
+     	<tr>
+     		<td>
+     			Start Date:
+     		</td>
+     		<td>
+     			<input type = "text" name = "schoolStart">
+     		</td>
+     		<td>
+     			End Date:
+     		</td>
+     		<td>
+     			<input type ="text" name = "schoolEnd">
+     		</td>
+     		<td>
+     			<button>Submit</button>
+     		</td>
+     	</tr>
+      </table>
+		  </td>
+		  </tr>
+      </table>
     </div>
     <div id="exp" class="tab-pane fade">
       <h3>Experience</h3>
       <p>What work experience do you have right now(if any)?</p>
+      <table width="438" height="320" cellpadding = 10>
+      	<tr>
+      		<td>
+      			Employer Name:
+      		</td>
+      		<td>
+      			<input type="text" name="workEmployer">
+      		</td>
+      	</tr>
+      	<tr>
+      		<td>
+      			City:
+      		</td>
+      		<td>
+      			<input type="text" name="workCity">
+      		</td>
+      	</tr>
+      	<tr>
+      		<td>
+      			State:
+      		</td>
+      		<td>
+      			<select name="workState">
+				<option value="AL">Alabama</option>
+				<option value="AK">Alaska</option>
+				<option value="AZ">Arizona</option>
+				<option value="AR">Arkansas</option>
+				<option value="CA">California</option>
+				<option value="CO">Colorado</option>
+				<option value="CT">Connecticut</option>
+				<option value="DE">Delaware</option>
+				<option value="DC">District of Columbia</option>
+				<option value="FL">Florida</option>
+				<option value="GA">Georgia</option>
+				<option value="HI">Hawaii</option>
+				<option value="ID">Idaho</option>
+				<option value="IL">Illinois</option>
+				<option value="IN">Indiana</option>
+				<option value="IA">Iowa</option>
+				<option value="KS">Kansas</option>
+				<option value="KY">Kentucky</option>
+				<option value="LA">Louisiana</option>
+				<option value="ME">Maine</option>
+				<option value="MD">Maryland</option>
+				<option value="MA">Massachusetts</option>
+				<option value="MI">Michigan</option>
+				<option value="MN">Minnesota</option>
+				<option value="MS">Mississippi</option>
+				<option value="MO">Missouri</option>
+				<option value="MT">Montana</option>
+				<option value="NE">Nebraska</option>
+				<option value="NV">Nevada</option>
+				<option value="NH">New Hampshire</option>
+				<option value="NJ">New Jersey</option>
+				<option value="NM">New Mexico</option>
+				<option value="NY">New York</option>
+				<option value="NC">North Carolina</option>
+				<option value="ND">North Dakota</option>
+				<option value="OH">Ohio</option>
+				<option value="OK">Oklahoma</option>
+				<option value="OR">Oregon</option>
+				<option value="PA">Pennsylvania</option>
+				<option value="RI">Rhode Island</option>
+				<option value="SC">South Carolina</option>
+				<option value="SD">South Dakota</option>
+				<option value="TN">Tennessee</option>
+				<option value="TX">Texas</option>
+				<option value="UT">Utah</option>
+				<option value="VT">Vermont</option>
+				<option value="VA">Virginia</option>
+				<option value="WA">Washington</option>
+				<option value="WV">West Virginia</option>
+				<option value="WI">Wisconsin</option>
+				<option value="WY">Wyoming</option>
+				</select>
+      		</td>
+      	</tr>
+      	<tr>
+      		<td>
+      			Position:
+      		</td>
+      		<td>
+      			<input type = "text" name = "workPos">
+      		</td>
+      	</tr>
+      	<tr>
+      		<td>
+      			Department:
+      		</td>
+      		<td>
+      			<input type = "text" name = "workDept">
+      		</td>
+      	</tr>
+      	<tr>
+      		<td>
+      			Current Employer?
+      		</td>
+      		<td>
+      			<input type = "radio" name = "workNowYes">Yes
+      		</td>
+      		<td>
+      			<input type = "radio" name = "workNowNo">No
+      		</td>
+      	</tr>
+      	<tr>
+      		<td>
+      			Start Date:
+      		</td>
+      		<td>
+      			<input type = "text" name = "workStart">
+      		</td>
+      	</tr>
+      	<tr>
+      		<td>
+      			End Date:
+      		</td>
+      		<td>
+      			<input type = "text" name = "workEnd">
+      		</td>
+      	</tr>
+      	<tr>
+      		<td>
+      			<button>Submit</button>
+      		</td>
+      	</tr>
+      </table>
     </div>
     <div id="projects" class="tab-pane fade">
       <h3>Projects</h3>
