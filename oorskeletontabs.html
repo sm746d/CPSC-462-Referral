@@ -9,7 +9,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-
+<form action ="/something.jsp">
 <div class="container">
 
   <ul class="nav nav-tabs">
@@ -70,7 +70,7 @@
       				Last Name:
       			</td>
       			<td>
-      				<input type="text" name = "lName" value = "McSmileFace"
+      				<input type="text" name = "lName" value = "McSmileFace">
       			</td>
       		</tr>
       		<tr>
@@ -326,7 +326,7 @@
     <div id="exp" class="tab-pane fade">
       <h3>Experience</h3>
       <p>What work experience do you have right now(if any)?</p>
-      <table width="438" height="320" cellpadding = 10>
+      <table width="438" height="320" cellpadding = "10">
       	<tr>
       		<td>
       			Employer Name:
@@ -456,6 +456,30 @@
     <div id="projects" class="tab-pane fade">
       <h3>Projects</h3>
       <p>What projects have you worked on?</p>
+      <table width="558" height="194">
+      	<tr>
+      		<td>
+      			Project Name:
+      		</td>
+      		<td>
+      			<input type = "text" name = "projectName">
+      		</td>
+      	</tr>
+      	<tr>
+      		<td>
+      			Project Description:
+      		</td>
+      		<td>
+				<textarea rows="4" cols="50">Enter Project Description here.</textarea>
+      		</td>
+      	</tr>
+      	<tr>
+      	<td>
+      		<button>Submit</button>
+      	</td>
+      		
+      	</tr>
+      </table>
     </div>
     <div id="references" class="tab-pane fade">
       <h3>References</h3>
@@ -463,6 +487,6 @@
     </div>
   </div>
 </div>
-
+</form>
 </body>
 </html>
